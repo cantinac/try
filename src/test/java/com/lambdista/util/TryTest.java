@@ -15,10 +15,8 @@
  */
 package com.lambdista.util;
 
-import com.lambdista.util.Try;
 import org.junit.Test;
 
-import java.util.NoSuchElementException;
 import java.util.Optional;
 
 import static org.junit.Assert.assertEquals;

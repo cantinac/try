@@ -212,8 +212,29 @@ public abstract class Try<T> {
             return new Failure<>(e);
         }
     }
-
-
+    
+    /**
+     * Create a new Success, wrapping the specified value.
+     * 
+     * @param <T> The type of value
+     * @param value The value to wrap
+     * @return The Success
+     */
+    public static <T> Try<T> success(final T value) {
+        return new Success<>(value);
+    }
+    
+    /**
+     * Create a new Success, wrapping the specified value.
+     * 
+     * @param <T> The type of value
+     * @param exception The exception to wrap
+     * @return The Failure
+     */
+    public static <T> Try<T> failure(final Exception exception) {
+        return new Failure<>(exception);
+    }
+    
     /**
      * Represents the successful result of a computation
      *
